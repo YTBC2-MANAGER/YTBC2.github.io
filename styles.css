@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 1.2em;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.burger-menu .bar1, .burger-menu .bar2, .burger-menu .bar3 {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.burger-menu.active .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.active .bar2 {
+    opacity: 0;
+}
+
+.burger-menu.active .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu ul li a:hover {
+    color: #ff0000;
+}
+
+main {
+    padding: 20px;
+}
+
+.intro, .features, .how-it-works, .download, .contact {
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro h2, .features h2, .how-it-works h2, .download h2, .contact h2 {
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.intro .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.intro .cta-button:hover {
+    background-color: #cc0000;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.feature-card i {
+    font-size: 3em;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    margin: 10px 0;
+}
+
+.how-it-works .step {
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.how-it-works .step h3 {
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 10px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.download-button:hover {
+    background-color: #cc0000;
+}
+
+.contact {
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
+
+.discord-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7289da;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.discord-button:hover {
+    background-color: #677ec2;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.5);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    animation: fadeInUp 1s ease-in-out;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        z-index: 1000;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
